@@ -7,3 +7,61 @@ body {
   background-color: black;
   font-family: 90sSEX;
 }
+
+p {
+  margin: 0px;
+}
+
+hr {
+  width: 300px;
+}
+
+#interface {
+  width: 600px;
+  height: 500px;
+  background-size: 25%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  background-image: url("/vernal-pool/style/bg/sandstone.jpg");
+}
+
+#overlay {
+  position: relative;
+}
+
+#begin-new-life {
+  top: 0px;
+}
+
+#viewport {
+  width: 400px;
+  height: 300px;
+  border-width: 10px;
+  border-style: inset;
+  background-color: black;
+}
+
+.title-text {
+  font-size: 40px;
+  font-family: 90sSEX;
+}
+
+.center-text {
+  margin: auto;
+  text-align: center;
+}
+
+.line {
+  width: 450px;
+  border-color: black;
+  border-style: outset;
+  background-color: black;
+}
+
+.spaced-out {
+  letter-spacing: 7px;
+}
