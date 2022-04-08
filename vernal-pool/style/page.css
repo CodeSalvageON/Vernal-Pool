@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 90sSEX;
+  src: url("/vernal-pool/style/times-new-roman-pixel.ttf");
+}
+
+body {
+  background-color: black;
+  font-family: 90sSEX;
+}
