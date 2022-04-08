@@ -45,6 +45,12 @@ hr {
   background-color: black;
 }
 
+#returnToTheSea {
+  width: 400px;
+  height: 300px;
+  display: none;
+}
+
 .title-text {
   font-size: 40px;
   font-family: 90sSEX;
