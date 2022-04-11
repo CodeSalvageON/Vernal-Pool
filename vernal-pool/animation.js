@@ -1,3 +1,7 @@
+let extinction_event = document.getElementById("extinction-event");
+let extinction_modal = document.getElementById("extinction-modal");
+let close_emodal = document.getElementById("close-emodal");
+
 function showReturn () {
   setTimeout(function () {
     $("#returnToTheSea").fadeIn(3000);
@@ -20,3 +24,11 @@ function showReturn () {
 }
 
 showReturn();
+
+extinction_event.onclick = function () {
+  extinction_modal.style.display = "block";
+}
+
+close_emodal.onclick = function () {
+  extinction_modal.style.display = "none";
+}
