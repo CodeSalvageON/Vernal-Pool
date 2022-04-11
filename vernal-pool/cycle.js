@@ -30,6 +30,39 @@ let close_salamander = document.getElementById("close-salamander");
 let sun_modal = document.getElementById("sun-modal");
 let close_sun = document.getElementById("close-sun");
 
+let species_modal = document.getElementById("species-modal");
+let close_species = document.getElementById("close-species");
+let species_form = document.getElementById("species-form");
+let spec_spec = document.getElementById("spec-spec");
+let spec_am = document.getElementById("spec-am");
+
+species_form.onsubmit = function () {
+  event.preventDefault();
+
+  if (spec_spec.value === "algae") {
+    currentAlgae += parseInt(spec_am.value);
+  }
+
+  else if (spec_spec.value === "tshrimp") {
+    currentTadpoleShrimps += parseInt(spec_am.value);
+  }
+
+  else if (spec_spec.value === "fshrimp") {
+    currentFairyShrimps += parseInt(spec_am.value);
+  }
+
+  else if (spec_spec.value === "wtiger") {
+    currentWaterTigers += parseInt(spec_am.value);
+  }
+
+  else if (spec_spec.value === "salv") {
+    currentSalamanders += parseInt(spec_am.value);
+  }
+
+  spec_am.value = "";
+  species_modal.style.display = "none";
+}
+
 let season_deny = true;
 
 function skipSeason () {
@@ -100,6 +133,7 @@ function hideAllModals () {
   rain_modal.style.display = "none";
   salamander_modal.style.display = "none";
   sun_modal.style.display = "none";
+  species_modal.style.display = "none";
 }
 
 function updatePool () {

@@ -28,14 +28,20 @@ function showReturn () {
         }
 
         else if (cycleStore === "summer") {
+          $("#summer-vernal").fadeIn(3000);
+          
           currentSeason = "summer";
         }
 
         else if (cycleStore === "fall") {
+          $("#fall-vernal").fadeIn(3000);
+          
           currentSeason = "fall";
         }
 
         else if (cycleStore === "winter") {
+          $("#winter-vernal").fadeIn(3000);
+          
           currentSeason = "winter";
         }
 
@@ -47,6 +53,7 @@ function showReturn () {
           setInterval(growPool, 1000);
           setInterval(growthCycle, 5000);
           setInterval(deathCycle, 7000);
+          setInterval(skipSeason, 180000);
         }, 1000);
       }, 3000);
     }, 4000);
@@ -83,9 +90,15 @@ close_sun.onclick = function () {
   sun_modal.style.display = "none";
 }
 
+close_species.onclick = function () {
+  species_modal.style.display = "none";
+}
+
 let viewport = document.getElementById("viewport");
 let enlargeMass = document.getElementById("enlarge-mass");
 let shrinkMass = document.getElementById("shrink-mass");
+let passSeason = document.getElementById("pass-season");
+let addSpecies = document.getElementById("add-species");
 
 enlargeMass.onclick = function () {
   if (currentSeason === "") {
@@ -111,4 +124,14 @@ shrinkMass.onclick = function () {
   setTimeout(function () {
     viewport.style.boxShadow = "none";
   }, 200);
+}
+
+passSeason.onclick = function () {
+  skipSeason();
+}
+
+addSpecies.onclick = function () {
+  hideAllModals();
+
+  species_modal.style.display = "block";
 }

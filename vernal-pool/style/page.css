@@ -45,7 +45,7 @@ hr {
   background-color: black;
 }
 
-#returnToTheSea, #spring-vernal, #summer-vernal {
+#returnToTheSea, #spring-vernal, #summer-vernal, #fall-vernal, #winter-vernal {
   width: 400px;
   height: 300px;
   display: none;
