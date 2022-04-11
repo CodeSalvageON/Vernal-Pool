@@ -78,3 +78,37 @@ close_rain.onclick = function () {
 close_salamander.onclick = function () {
   salamander_modal.style.display = "none";
 }
+
+close_sun.onclick = function () {
+  sun_modal.style.display = "none";
+}
+
+let viewport = document.getElementById("viewport");
+let enlargeMass = document.getElementById("enlarge-mass");
+let shrinkMass = document.getElementById("shrink-mass");
+
+enlargeMass.onclick = function () {
+  if (currentSeason === "") {
+    return false;
+  }
+  
+  viewport.style.boxShadow = "0px 0px 40px 15px green";
+  currentAlgae += 5;
+
+  setTimeout(function () {
+    viewport.style.boxShadow = "none";
+  }, 200);
+}
+
+shrinkMass.onclick = function () {
+  if (currentSeason === "") {
+    return false;
+  }
+  
+  viewport.style.boxShadow = "0px 0px 40px 15px red";
+  currentAlgae -= 5;
+
+  setTimeout(function () {
+    viewport.style.boxShadow = "none";
+  }, 200);
+}

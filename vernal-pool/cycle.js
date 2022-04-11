@@ -30,6 +30,70 @@ let close_salamander = document.getElementById("close-salamander");
 let sun_modal = document.getElementById("sun-modal");
 let close_sun = document.getElementById("close-sun");
 
+let season_deny = true;
+
+function skipSeason () {
+  if (season_deny === false) {
+    return false;
+  }
+  
+  if (currentSeason === "spring") {
+    season_deny = false;
+
+    currentSeason = "summer";
+    localStorage.setItem("cycleStore-vernal", "summer");
+
+    $("#spring-vernal").fadeOut(3000);
+    
+    setTimeout(function () {
+      season_deny = true;
+      $("#summer-vernal").fadeIn(3000);
+    }, 3000);
+  }
+
+  else if (currentSeason === "summer") {
+    season_deny = false;
+
+    currentSeason = "fall";
+    localStorage.setItem("cycleStore-vernal", "fall");
+
+    $("#summer-vernal").fadeOut(3000);
+    
+    setTimeout(function () {
+      season_deny = true;
+      $("#fall-vernal").fadeIn(3000);
+    }, 3000);
+  }
+
+  else if (currentSeason === "fall") {
+    season_deny = false;
+
+    currentSeason = "winter";
+    localStorage.setItem("cycleStore-vernal", "winter");
+
+    $("#fall-vernal").fadeOut(3000);
+    
+    setTimeout(function () {
+      season_deny = true;
+      $("#winter-vernal").fadeIn(3000);
+    }, 3000);
+  }
+
+  else if (currentSeason === "winter") {
+    season_deny = false;
+
+    currentSeason = "spring";
+    localStorage.setItem("cycleStore-vernal", "spring");
+
+    $("#winter-vernal").fadeOut(3000);
+    
+    setTimeout(function () {
+      season_deny = true;
+      $("#spring-vernal").fadeIn(3000);
+    }, 3000);
+  }
+}
+
 function hideAllModals () {
   extinction_modal.style.display = "none";
   stat_modal.style.display = "none";
