@@ -51,6 +51,39 @@ hr {
   display: none;
 }
 
+#hoi4 {
+  margin: auto;
+  display: flex;
+}
+
+#table-interface {
+  display: table;
+}
+
+#pass-season {
+  background-size: cover;
+  display: inline-block;
+  background-image: url("/vernal-pool/style/bg/realweather.png");
+}
+
+#add-species {
+  background-size: cover;
+  display: inline-block;
+  background-image: url("/vernal-pool/style/bg/salamander.jpg");
+}
+
+#shrink-mass {
+  background-size: cover;
+  display: inline-block;
+  background-image: url("/vernal-pool/style/bg/shrink.PNG");
+}
+
+#enlarge-mass {
+  background-size: cover;
+  display: inline-block;
+  background-image: url("/vernal-pool/style/bg/enlarge.PNG");
+}
+
 .title-text {
   font-size: 40px;
   font-family: 90sSEX;
@@ -70,4 +103,14 @@ hr {
 
 .spaced-out {
   letter-spacing: 7px;
+}
+
+.rounded-btn {
+  padding: 8px;
+  border-radius: 3px;
+  border-style: inset;
+  border-color: green;
+  border-width: 6px;
+  width: 50px;
+  height: 50px;
 }
