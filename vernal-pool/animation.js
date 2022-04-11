@@ -8,6 +8,9 @@ function showReturn () {
       setTimeout(function () {
         if (cycleStore === "" || cycleStore === null || cycleStore === undefined) {
           $("#spring-vernal").fadeIn(3000);
+          
+          currentSeason = "spring";
+          localStorage.setItem("cycleStore-vernal", "spring");
         }
 
         else if (cycleStore === "winter") {}
