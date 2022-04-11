@@ -334,3 +334,5 @@ function growPool () {
 
   updatePool();
 }
+
+let go_ahead = document.getElementById("go-ahead");
