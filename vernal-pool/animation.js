@@ -22,6 +22,8 @@ function showReturn () {
         }
 
         else if (cycleStore === "spring") {
+          $("#spring-vernal").fadeIn(3000);
+          
           currentSeason = "spring";
         }
 
@@ -67,4 +69,12 @@ stats.onclick = function () {
 
 close_stat.onclick = function () {
   stat_modal.style.display = "none";
+}
+
+close_rain.onclick = function () {
+  rain_modal.style.display = "none";
+}
+
+close_salamander.onclick = function () {
+  salamander_modal.style.display = "none";
 }

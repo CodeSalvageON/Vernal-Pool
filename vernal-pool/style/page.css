@@ -45,7 +45,7 @@ hr {
   background-color: black;
 }
 
-#returnToTheSea, #spring-vernal {
+#returnToTheSea, #spring-vernal, #summer-vernal {
   width: 400px;
   height: 300px;
   display: none;
@@ -86,6 +86,7 @@ hr {
 
 #extinction-event {
   width: 80px;
+  height: 200px;
   left: 0px;
   top: 100px;
   position: absolute; 
@@ -100,6 +101,10 @@ hr {
 
 #stat-text {
   width: 30px;
+}
+
+#info-dest {
+  text-align: justify;
 }
 
 .title-text {
@@ -154,8 +159,14 @@ hr {
 }
 
 .modal-content {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 500px;
+  height: 280px;
   margin: auto;
+  position: absolute;
 }
 
 .window {
@@ -164,4 +175,12 @@ hr {
 
 .readable {
   font-size: 20px;
+}
+
+.floater {
+  float: left;
+}
+
+.boxed {
+  padding: 5px;
 }

@@ -21,8 +21,24 @@ let fairy_shrimp_stat = document.getElementById("fairy-shrimp-stat");
 let tadpole_shrimp_stat = document.getElementById("tadpole-shrimp-stat");
 let algae_stat = document.getElementById("algae-stat");
 
+let rain_modal = document.getElementById("rain-modal");
+let close_rain = document.getElementById("close-rain");
+
+let salamander_modal = document.getElementById("salamander-modal");
+let close_salamander = document.getElementById("close-salamander");
+
+let sun_modal = document.getElementById("sun-modal");
+let close_sun = document.getElementById("close-sun");
+
+function hideAllModals () {
+  extinction_modal.style.display = "none";
+  stat_modal.style.display = "none";
+  rain_modal.style.display = "none";
+  salamander_modal.style.display = "none";
+  sun_modal.style.display = "none";
+}
+
 function updatePool () {
-  frogs_stat.innerText = "Frogs: " + currentFrogs + ", Tadpoles: " + currentTadpoles;
   salamander_stat.innerText = "Salamanders: " + currentSalamanders + ", Efts: " + currentEfts;
   water_tiger_stat.innerText = "Water Tiger Beetles: " + currentWaterTigers + ", Larvae: " + currentLarvae;
   fairy_shrimp_stat.innerText = "Fairy Shrimp: " + currentFairyShrimps + ", Eggs: " + currentFairyEggs;
@@ -167,10 +183,24 @@ function growPool () {
   let randomPool = Math.floor(Math.random() * 100);
   
   if (randomPool === 0) {
-    let randomDisaster = Math.floor(Math.random() * 5);
+    let randomDisaster = Math.floor(Math.random() * 3);
 
-    if (randomDisaster === 1) {
-      
+    if (randomDisaster === 0) {
+      hideAllModals();
+      currentAlgae += 10;
+      rain_modal.style.display = "block";
+    }
+
+    else if (randomDisaster === 1) {
+      hideAllModals();
+      currentSalamanders += 5;
+      salamander_modal.style.display = "block";
+    }
+
+    else {
+      hideAllModals();
+      currentAlgae -= 5;
+      sun_modal.style.display = "block";
     }
   }
 
