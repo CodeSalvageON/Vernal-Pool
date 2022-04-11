@@ -20,8 +20,8 @@
             <img src="/vernal-pool/style/bg/danger.PNG" width="70" height="60" class="bad-button"/>
           </section>
           <section class="event" id="stats">
-            <p class="small-text">STATS/SCIENCE</p>
-            <img src="/vernal-pool/style/bg/stages/spring-vernal.PNG" width="70" height="60" class="bad-button"/>
+            <p class="small-text" id="stat-text">STAT</p>
+            <img src="/vernal-pool/style/bg/stages/springvernal.jpg" width="60" height="50" class="bad-button"/>
           </section>
           <section id="viewport">
             <img src="/vernal-pool/style/bg/return.PNG" id="returnToTheSea"/>
@@ -45,6 +45,30 @@
               <section class="title-bar-controls"> 
                 <button aria-label="Close" id="close-emodal"></button>
               </section>
+            </section>
+          </section>
+        </section>
+        <section id="stat-modal" class="modal">
+          <section id="stat-window" class="modal-content window">
+            <section class="title-bar">
+              <p class="title-bar-text">
+                STATISTICS/SCIENCE
+              </p>
+              <section class="title-bar-controls"> 
+                <button aria-label="Close" id="close-stat"></button>
+              </section>
+            </section>
+            <section class="readable">
+              <p><b>FAUNA/ANIMAL SPECIES</b></p>
+              <p id="frogs-stat">Frogs: 0, Tadpoles: 0</p>
+              <p id="salamander-stat">Salamanders: 0, Efts: 0</p>
+              <p id="water-tiger-stat">Water Tiger Beetles: 0, Larvae: 0</p>
+              <p id="fairy-shrimp-stat">Fairy Shrimp: 0, Eggs: 0</p>
+              <p id="tadpole-shrimp-stat">Tadpole Shrimp: 0, Eggs: 0</p>
+              <p><b>FLORA/PLANT SPECIES</b></p>
+              <p id="algae-stat">Algae: 0</p>
+              <p class="line"></p>
+              <p><i>Statistics update every 1 seconds.</i></p>
             </section>
           </section>
         </section>

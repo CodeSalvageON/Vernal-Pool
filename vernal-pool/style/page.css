@@ -91,6 +91,17 @@ hr {
   position: absolute; 
 }
 
+#stats {
+  width: 70px;
+  right: 0px;
+  top: 100px;
+  position: absolute;
+}
+
+#stat-text {
+  width: 30px;
+}
+
 .title-text {
   font-size: 40px;
   font-family: 90sSEX;
@@ -149,4 +160,8 @@ hr {
 
 .window {
   width: 500px;
+}
+
+.readable {
+  font-size: 20px;
 }
