@@ -336,3 +336,7 @@ function growPool () {
 }
 
 let go_ahead = document.getElementById("go-ahead");
+
+go_ahead.onclick = function () {
+  extinction_modal.style.display = "none";
+}
