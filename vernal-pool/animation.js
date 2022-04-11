@@ -43,6 +43,8 @@ function showReturn () {
 
         setTimeout(function () {
           setInterval(growPool, 1000);
+          setInterval(growthCycle, 5000);
+          setInterval(deathCycle, 7000);
         }, 1000);
       }, 3000);
     }, 4000);
