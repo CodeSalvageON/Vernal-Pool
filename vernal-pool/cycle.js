@@ -1,5 +1,13 @@
 const cycleStore = localStorage.getItem("cycleStore-vernal");
 const algaeStore = localStorage.getItem("algaeStore-vernal");
+const tshrimpStore = localStorage.getItem("tshrimpStore-vernal");
+const fshrimpStore = localStorage.getItem("fshrimpStore-vernal");
+const wtigerStore = localStorage.getItem("wtigerStore-vernal");
+const salvStore = localStorage.getItem("salvStore-vernal");
+const tshrimpEggStore = localStorage.getItem("tshrimpEggStore-vernal");
+const fshrimpEggStore = localStorage.getItem("fshrimpEggStore-vernal");
+const eftsStore = localStorage.getItem("eftsStore-vernal");
+const larvaeStore = localStorage.getItem("larvaeStore-vernal");
 
 let currentSeason = "";
 let currentAlgae = 0;
@@ -13,6 +21,22 @@ let currentFairyShrimps = 0;
 let currentTadpoleShrimps = 0;
 let currentFairyEggs = 0;
 let currentTadpoleEggs = 0;
+
+if (cycleStore === "" || cycleStore === null || cycleStore === undefined) {
+  // Do nothing
+}
+
+else {
+  currentAlgae = parseInt(algaeStore);
+  currentSalamanders = parseInt(salvStore);
+  currentEfts = parseInt(eftsStore);
+  currentWaterTigers = parseInt(wtigerStore);
+  currentLarvae = parseInt(larvaeStore);
+  currentFairyShrimps = parseInt(fshrimpStore);
+  currentTadpoleShrimps = parseInt(tshrimpStore);
+  currentFairyEggs = parseInt(fshrimpEggStore);
+  currentTadpoleEggs = parseInt(tshrimpEggStore);
+}
 
 let frogs_stat = document.getElementById("frogs-stat");
 let salamander_stat = document.getElementById("salamander-stat");
@@ -142,6 +166,16 @@ function updatePool () {
   fairy_shrimp_stat.innerText = "Fairy Shrimp: " + currentFairyShrimps + ", Eggs: " + currentFairyEggs;
   tadpole_shrimp_stat.innerText = "Tadpole Shrimp: " + currentTadpoleShrimps + ", Eggs: " + currentTadpoleEggs;
   algae_stat.innerText = "Algae: " + currentAlgae;
+
+  localStorage.setItem("algaeStore-vernal", currentAlgae);
+  localStorage.setItem("tshrimpStore-vernal", currentTadpoleShrimps);
+  localStorage.setItem("fshrimpStore-vernal", currentFairyShrimps);
+  localStorage.setItem("wtigerStore-vernal", currentWaterTigers);
+  localStorage.setItem("salvStore-vernal", currentSalamanders);
+  localStorage.setItem("tshrimpEggStore-vernal", currentTadpoleEggs);
+  localStorage.setItem("fshrimpEggStore-vernal", currentFairyEggs);
+  localStorage.setItem("eftsStore-vernal", currentEfts);
+  localStorage.setItem("larvaeStore-vernal", currentLarvae);
 }
 
 function noFreakyMath () {
@@ -339,4 +373,6 @@ let go_ahead = document.getElementById("go-ahead");
 
 go_ahead.onclick = function () {
   extinction_modal.style.display = "none";
+
+  let randomThink = Math.floor(Math.random() * 4);
 }
