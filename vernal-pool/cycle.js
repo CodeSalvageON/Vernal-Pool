@@ -370,9 +370,20 @@ function growPool () {
 }
 
 let go_ahead = document.getElementById("go-ahead");
+let nuke_modal = document.getElementById("nuke-modal");
+let close_nuke = document.getElementById("close-nuke")
 
 go_ahead.onclick = function () {
   extinction_modal.style.display = "none";
+  nuke_modal.style.display = "block";
 
-  let randomThink = Math.floor(Math.random() * 4);
+  currentAlgae = 0;
+  currentSalamanders = 0;
+  currentEfts = 0;
+  currentWaterTigers = 0;
+  currentLarvae = 0;
+  currentFairyShrimps = 0;
+  currentTadpoleShrimps = 0;
+  currentFairyEggs = 0;
+  currentTadpoleEggs = 0;
 }

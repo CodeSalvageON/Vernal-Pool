@@ -94,6 +94,10 @@ close_species.onclick = function () {
   species_modal.style.display = "none";
 }
 
+close_nuke.onclick = function () {
+  nuke_modal.style.display = "none";
+}
+
 let viewport = document.getElementById("viewport");
 let enlargeMass = document.getElementById("enlarge-mass");
 let shrinkMass = document.getElementById("shrink-mass");
